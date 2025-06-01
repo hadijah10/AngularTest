@@ -1,5 +1,5 @@
 .container{
-    width: 60vw;
+   
     display: flex;
     flex-direction: column;
     gap:2rem;
@@ -27,7 +27,7 @@ input{
     border-radius: 1rem;
 }
 .add{
-    max-width: 10rem;
+    width: 10rem;
 }
 .btnCount{
     display: flex;
