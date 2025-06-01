@@ -21,5 +21,12 @@
     </div>
   </div>
  }
-<app-course-card></app-course-card>
+ @for(course of courses;track $index; let index=$index; let count= $count){
+  <app-course-card [course]="course" (courseSelected)="onCourseViewed($event)">
+  </app-course-card>
+ }
+ @empty{
+  <p>No element found</p>
+ }
+
 </div>

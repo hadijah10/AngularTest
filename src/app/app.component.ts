@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { CourseCardComponent } from './components/course-card/course-card.component';
+import { cardData } from './model/data/data';
+import { IData } from './model/interfaces/dataInterface';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +18,8 @@ export class AppComponent {
   course = 'angular-course';
   index:number | null = null
   shouldUpdate:boolean = false
+  courses:IData []= cardData
+
   data={
     name: 'Reese',
     age: 24
@@ -58,6 +62,13 @@ export class AppComponent {
      handletheme(event:Event){
     const body = document.querySelector('body') as HTMLElement
     body.classList.toggle('dark-theme')
+
+  }
+  handleClickBubble(){
+    console.log('Parent clicked')
+  }
+  onCourseViewed(event:IData){
+    console.log(event)
   }
 }
 

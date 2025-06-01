@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,EventEmitter,Input,Output } from '@angular/core';
+import { IData } from '../../model/interfaces/dataInterface';
 
 @Component({
   selector: 'app-course-card',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './course-card.component.css'
 })
 export class CourseCardComponent {
-
+ @Input() course:IData = {title:'',data:''}
+ @Output('courseSelected') courseEmitter = new EventEmitter()
+ handleClick(){
+  console.log('clicked me')
+  this.courseEmitter.emit(this.course)
+ }
 }
