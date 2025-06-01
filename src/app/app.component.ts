@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { CourseCardComponent } from './components/course-card/course-card.component';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule],
+  imports: [FormsModule,CourseCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -54,4 +55,9 @@ export class AppComponent {
   disp(tex:string | null){
     console.log(tex)
   }
+     handletheme(event:Event){
+    const body = document.querySelector('body') as HTMLElement
+    body.classList.toggle('dark-theme')
+  }
 }
+

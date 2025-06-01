@@ -2,8 +2,9 @@
     width:min(95%,40rem);
     display:flex;
     flex-direction:column;
-    gap:1rem;
-    box-shadow: 5px 5px 10px 10px;
+    gap:2rem;
+    box-shadow: 5px 5px 5px 5px;
+    padding: 1rem;
 }
 img{
     height: 10rem;

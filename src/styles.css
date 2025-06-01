@@ -5,7 +5,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+--root{
+    --bg:black;
+    --color: white;
+}
+.dark-theme{
+    --bg:white;
+    --color: white;
+}
 body{
+    background-color: var(--bg);
+    color: var(--color);
     min-height: 100vh;
     display: grid;
     place-content: center;
@@ -13,6 +23,7 @@ body{
     font-style: normal;
     gap: rem;
     width: 100vw;
+    padding-bottom: 2rem;
 }
 button{
     padding: 0.5rem;
