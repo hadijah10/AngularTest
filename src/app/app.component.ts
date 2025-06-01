@@ -9,6 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title = 'Mark'
   task: string = '';
   count= 0;
   course = 'angular-course';
@@ -49,5 +50,8 @@ export class AppComponent {
     this.index = index
     this.task = this.Tasks[index]
     this.shouldUpdate = true
+  }
+  disp(tex:string | null){
+    console.log(tex)
   }
 }
