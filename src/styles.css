@@ -22,12 +22,11 @@ body{
     background-color: var(--bg);
     color: var(--color);
     min-height: 100vh;
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
     font-family: "Poppins";
     font-style: normal;
-    gap: rem;
-    width: 100vw;
+    gap: 1rem;
     padding-bottom: 2rem;
 }
 /* body.dark-theme{
@@ -38,11 +37,12 @@ button{
     padding: 0.5rem;
     background-color: brown;
     color: white;
+    border: none;
+    border-radius: 5px;
     &:hover{
         background-color: cadetblue;
         color: black;
     }
-    border: none;
-    border-radius: 5px;
+   
 
 }

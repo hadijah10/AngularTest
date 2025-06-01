@@ -1,4 +1,5 @@
-<app-todo></app-todo>
+<div class="appcomponent">
+  <app-todo></app-todo>
  @for(course of courses;track index; let index=$index; let count= $count,let first=$first){
   <app-course-card [course]="course" (courseSelected)="onCourseViewed($event)" [class.isfirst]="$first">
   </app-course-card>
@@ -7,3 +8,4 @@
  @empty{
   <p>No element found</p>
  }
+ </div>
