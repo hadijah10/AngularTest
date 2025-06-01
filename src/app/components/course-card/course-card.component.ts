@@ -8,7 +8,7 @@ import { IData } from '../../model/interfaces/dataInterface';
   styleUrl: './course-card.component.css'
 })
 export class CourseCardComponent {
- @Input() course:IData = {title:'',data:''}
+ @Input() course:IData = {title:'',img:'',data:''}
  @Output('courseSelected') courseEmitter = new EventEmitter()
  handleClick(){
   console.log('clicked me')

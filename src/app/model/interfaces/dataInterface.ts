@@ -1,4 +1,5 @@
 export interface IData{
-    title:string,
-    data: string
+    title:string;
+    img:string;
+    data: string;
 }

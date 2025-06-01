@@ -1,0 +1,23 @@
+<div class="container">
+  <button (click)="handletheme($event)" >Theme</button>
+  <h2>
+  {{count}}
+</h2>
+<!-- <input type="text" name="name" [value]="data.name"> -->
+<div class="btnCount">
+  <button (click)="increaseCount()">Increase</button>
+<button (click)="decreaseCount()">Decrease</button>
+</div>
+<!-- <input class="demo" (keyup)="onKeyup()" [value]="data.title" > -->
+ <input type="text" name="task" [(ngModel)] = "task" placeholder="Add a Task" required>
+ <button (click)="addTask()" class="add">Add task</button>
+ <p (mouseover)="disp(buttonup.textContent)"  #buttonup>Over</p>
+ @for(task of Tasks;track $index;let index= $index){
+  <div class="task">
+     <p>{{task}}</p>
+    <div class="actions">
+         <button (click)="onDelete(index)">Delete</button>
+        <button (click) = "update(index)" class="btn" #buttonupdate>Update</button>
+    </div>
+  </div>
+ }
